@@ -456,11 +456,14 @@
       *-----------------------------------------------------------------
        
            IF (WS-FS-IMPORT-CLI            NOT EQUAL ZEROS AND '10')
-             DISPLAY 'FILE STATUS: 'WS-FS-IMPORT-CLI' OPERACAO: '
+             DISPLAY WS-LINHA-BRANCO       AT 2302
+             DISPLAY 'FILE STATUS:'        AT 2310
+             DISPLAY WS-FS-IMPORT-CLI      AT 2324
+             DISPLAY ' OPERACAO: '         AT 2326 
              WS-OPERACAO' ARQUIVO CLIENTE'
-                                       AT 2302
-               STOP ' '
-             DISPLAY WS-LINHA-BRANCO AT 2302
+                                           AT 2337
+             STOP ' '
+             DISPLAY WS-LINHA-BRANCO       AT 2302
            END-IF
            
            IF (WS-FS-IMPORT-CLI        EQUAL '10')
